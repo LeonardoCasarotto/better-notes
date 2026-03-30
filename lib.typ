@@ -14,7 +14,7 @@
       thickness: 1pt,
     ),
     title: strong(titolo),
-    // Il corpo deve essere passato come contenuto
+
     corpo
   )
 }
