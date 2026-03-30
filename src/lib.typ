@@ -1,26 +1,3 @@
-#import "@preview/showybox:2.0.4": showybox
-
-
-
-
-
-#let osservazione(titolo, corpo) = {
-  showybox(
-    frame: (
-      border-color: rgb("#2E7D32"),
-      title-color: rgb("#2E7D32"),
-      body-color: rgb("#E8F5E9"),
-      radius: 2pt,
-      thickness: 1pt,
-    ),
-    title: strong(titolo),
-
-    corpo
-  )
-}
-
-
-
 #let line_block(colore, ..args) = {
   let pos = args.pos()
   let (titolo, corpo) = if pos.len() > 1 {
