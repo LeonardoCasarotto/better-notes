@@ -5,6 +5,6 @@ DEST="$HOME/Library/Application Support/typst/packages/local/better-notes/$VERSI
 
 # Crea la cartella per quella versione e copia i file
 mkdir -p "$DEST"
-cp ./src/lib.typ ./typst.toml "$DEST"
+cp  -a ./src/. ./typst.toml "$DEST"
 
 echo "✅ Package better-notes v$VERSION successfully installed!"

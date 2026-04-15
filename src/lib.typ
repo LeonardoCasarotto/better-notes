@@ -1,8 +1,14 @@
 #import "w3c.typ": *
 
-#let side_note(color: "green", title: "", corpo) = {
+
+#let side_note(colore: "green", title: "", corpo) = {
   
-  let line-color = w3colors.at(lower(color), default: rgb("#008000"))
+
+  let line-color = if type(colore) == str {
+    w3colors.at(lower(colore), default: rgb("#008000"))
+  } else {
+    colore 
+  }
 
   block(
     width: 100%,
@@ -17,3 +23,7 @@
     #corpo
   ]
 }
+
+#let esempio(corpo) = side_note(colore: rgb("#6495ED"), title: "Esempio:", corpo)
+#let esercizio(corpo) = side_note(colore: rgb("#5E35B1"), title: "Esercizio:", corpo)
+#let note(corpo) = side_note(colore: rgb("#5E35B1"), title: "Esercizio:", corpo)
